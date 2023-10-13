@@ -3,3 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.menu-btn {
+    height: 5px;
+    width: 20px;
+    background-color: black;
+}
