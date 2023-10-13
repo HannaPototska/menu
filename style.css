@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    width: 100vw;
+    height: 100vh;
+}
 
 .menu-btn {
     height: 5px;
@@ -42,9 +46,37 @@ input:checked ~ label .menu-btn::after {
     top: 0;
 } 
 
-input:checked ~ label .menu-btn {
+input:checked ~ label .menu-btn  {
     background-color: transparent;
 }
 
+.menu {
+    height: 99%;
+    width: 0;
+    transition: 2s;
+}
+
+
+.menu p {
+    display: none;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+input:checked ~ .menu {
+   
+    width: 50%;
+    height: 99%;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+input:checked ~ .menu p {
+    display: block;
+}
 
 
