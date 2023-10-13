@@ -8,4 +8,23 @@
     height: 5px;
     width: 20px;
     background-color: black;
+    position: relative;
+    margin-top: 20px;
+}
+
+.menu-btn::before, .menu-btn::after {
+    content: "";
+    height: 5px;
+    width: 20px;
+    background-color: black;
+    position: absolute;
+
+}
+
+.menu-btn::before {
+    top: -7px;
+}
+
+.menu-btn::after{
+    top: 7px;
 }
