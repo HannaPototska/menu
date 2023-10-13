@@ -16,6 +16,7 @@ body {
     top: 20px;
     left: 20px;
     transition: 1s;
+    cursor: pointer;
 }
 
 .menu-btn::before, .menu-btn::after {
@@ -26,9 +27,6 @@ body {
     position: absolute;
     transition: 1s;
 }
-input {
-    display: none;
-}
 .menu-btn::before {
     top: -7px;
 }
@@ -37,6 +35,9 @@ input {
     top: 7px;
 }
 
+input {
+display: none;
+}
 input:checked ~ label .menu-btn::before {
     transform: rotate(405deg);
     top: 0;
@@ -77,6 +78,28 @@ input:checked ~ .menu {
 
 input:checked ~ .menu p {
     display: block;
+}
+
+.menu p {
+    position: relative;
+    cursor: pointer;
+}
+.menu p::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: black;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.menu p:hover::after {
+    transform-origin: left;
+    transform: scale(1);
 }
 
 
