@@ -6,16 +6,17 @@
 
 .menu-btn {
     height: 5px;
-    width: 20px;
+    width: 25px;
     background-color: black;
     position: relative;
-    margin-top: 20px;
+    top: 20px;
+    left: 20px;
 }
 
 .menu-btn::before, .menu-btn::after {
     content: "";
     height: 5px;
-    width: 20px;
+    width: 25px;
     background-color: black;
     position: absolute;
 
@@ -27,4 +28,17 @@
 
 .menu-btn::after{
     top: 7px;
+}
+.menu-btn::before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.menu-btn::after{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-btn {
+    background-color: transparent;
 }
