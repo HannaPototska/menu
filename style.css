@@ -11,6 +11,7 @@
     position: relative;
     top: 20px;
     left: 20px;
+    transition: 1s;
 }
 
 .menu-btn::before, .menu-btn::after {
@@ -19,9 +20,11 @@
     width: 25px;
     background-color: black;
     position: absolute;
-
+    transition: 1s;
 }
-
+input {
+    display: none;
+}
 .menu-btn::before {
     top: -7px;
 }
@@ -29,16 +32,19 @@
 .menu-btn::after{
     top: 7px;
 }
-.menu-btn::before{
-    transform: rotate(-45deg);
+
+input:checked ~ label .menu-btn::before {
+    transform: rotate(405deg);
     top: 0;
 }
-
-.menu-btn::after{
-    transform: rotate(45deg);
+input:checked ~ label .menu-btn::after {
+    transform: rotate(-405deg);
     top: 0;
-}
+} 
 
-.menu-btn {
+input:checked ~ label .menu-btn {
     background-color: transparent;
 }
+
+
+
